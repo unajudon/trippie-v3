@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Build output
+.next
+out
+
+# System files
+.DS_Store
+*.log
+
+# Optional: dotenv
+.env
