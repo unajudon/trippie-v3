@@ -1,0 +1,98 @@
+export const trippies = [
+  {
+    name: 'Monsieur Trippie',
+    mbti: ['ENFP', 'ENTP'],
+    quirkyTraits: [
+      'Invents new games on the spot',
+      'Gets excited by idea storms',
+      'Talks to clouds like they’re old friends',
+      'Always 10 tabs open in the brain',
+    ],
+    strengths: 'Curious, creative, energetic, spontaneous',
+    weaknesses: 'Scattered, impulsive, can get bored easily',
+  },
+  {
+    name: 'Baby Egg Trippie',
+    mbti: ['INFP'],
+    quirkyTraits: [
+      'Talks to flowers',
+      'Sings lullabies to stars',
+      'Writes poetry on floating leaves',
+      'Dreams even when awake',
+    ],
+    strengths: 'Empathetic, idealistic, deep thinker',
+    weaknesses: 'Sensitive, can be indecisive',
+  },
+  {
+    name: 'Onigiri Trippie',
+    mbti: ['ISFJ', 'ISTJ'],
+    quirkyTraits: [
+      'Wraps snacks for everyone',
+      'Keeps a tidy bubble',
+      'Always early for cloud buses',
+      'Logs every magical moment in a journal',
+    ],
+    strengths: 'Reliable, responsible, practical, loyal',
+    weaknesses: 'Resistant to change, may overwork themselves',
+  },
+  {
+    name: 'Boba Trippie',
+    mbti: ['ESFP', 'ESFJ', 'ESTP'],
+    quirkyTraits: [
+      'Pops boba pearls when excited',
+      'Can’t stop dancing while waiting',
+      'Tries every new drink trend instantly',
+      'Wears mismatched socks on purpose',
+    ],
+    strengths: 'Energetic, fun-loving, charming, lives in the moment',
+    weaknesses: 'Impulsive, forgetful, easily distracted',
+  },
+  {
+    name: 'Snorkeler Trippie',
+    mbti: ['ISTP'],
+    quirkyTraits: [
+      'Fixes magic gadgets',
+      'Silent but observant',
+      'Knows how to unsummon storms',
+      'Swims with skyfish for fun',
+    ],
+    strengths: 'Independent, efficient, practical',
+    weaknesses: 'Detached, can be insensitive',
+  },
+  {
+    name: 'Bao Trippie',
+    mbti: ['INFJ', 'INTP'],
+    quirkyTraits: [
+      'Meditates in moonlight',
+      'Solves puzzles mid-dream',
+      'Asks big questions to small creatures',
+      'Keeps secrets in stardust jars',
+    ],
+    strengths: 'Insightful, imaginative, thoughtful',
+    weaknesses: 'Overthinks, can be distant',
+  },
+  {
+    name: 'YouTrippy',
+    mbti: ['ENTJ', 'INTJ', 'ESTJ'],
+    quirkyTraits: [
+      'Has a 3-year vision board',
+      'Leads expeditions through rainbow forests',
+      'Gives motivational speeches to rivers',
+      'Never loses at Magical Chess',
+    ],
+    strengths: 'Strategic, confident, organized, inspiring',
+    weaknesses: 'Stubborn, overly critical',
+  },
+  {
+    name: 'Surfer Trippie',
+    mbti: ['ISFP'],
+    quirkyTraits: [
+      'Surfs on starlight',
+      'Builds sandcastles in space',
+      'Carries a playlist for every mood',
+      'Whistles with birds at sunrise',
+    ],
+    strengths: 'Calm, artistic, adventurous',
+    weaknesses: 'Shy, can struggle with direction',
+  },
+];
