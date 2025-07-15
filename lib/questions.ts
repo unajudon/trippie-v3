@@ -1,121 +1,119 @@
-// lib/questions.ts
-
 export const questions = [
   {
     id: 1,
     question: "🧳 Changi Lost & Found",
-    description: "As you emerge from the suitcase, curious travellers pass by, glancing into the lost-and-found portal. One waves. A nearby butterfly also seems friendly.",
+    description: "You blink awake inside a dusty suitcase, deep in Changi’s lost-and-found. Outside, a family of pigeons is debating which hawker stall to visit. One spots you and waves.",
     choices: [
-      { text: "You flap out immediately to greet them — might as well make your first friend.", value: "E" },
-      { text: "You hide behind a passport stack. Too many people. Maybe later.", value: "I" }
+      { text: "🟣 You tumble out with a bow. Might as well make your debut.", value: "E" },
+      { text: "🔵 You stay nestled in a sock and observe. Too many feathers, too soon.", value: "I" }
     ]
   },
   {
     id: 2,
-    question: "🍣 Japan: Sushi Train of Fate",
-    description: "You board a sushi train where each dish shows you a vision of your future. One plate glows with exact details: job, dates, income. The other? Just sparkles and a question mark.",
+    question: "🍣 Tokyo: Memory Conveyor Café",
+    description: "In Tokyo, you’re invited to a conveyor belt café that serves memories instead of food. One plate shows your dream job. Another is… blank, with sparkles.",
     choices: [
-      { text: "Take the detailed plate. Clarity is comforting.", value: "S" },
-      { text: "Pick the question mark. It feels more exciting that way.", value: "N" }
+      { text: "🟣 Take the dream job plate. It’s oddly comforting to see it spelled out.", value: "S" },
+      { text: "🔵 Pick the blank one. Who needs spoilers?", value: "N" }
     ]
   },
   {
     id: 3,
-    question: "🥭 Thailand: Mango Boat Mix-Up",
-    description: "At a canal market, a mango smoothie floats toward you — but another Trippie reaches at the same time.",
+    question: "🥭 Chiang Mai: Smoothie Standoff",
+    description: "In Chiang Mai, a levitating mango smoothie hovers between you and another traveler. You both reach at the same time.",
     choices: [
-      { text: "You smile and wave them to take it. They looked excited.", value: "F" },
-      { text: "You suggest splitting the drink and use your YouTrip card to pay for the next one.", value: "T" }
+      { text: "🟣 You nudge it toward them. They seem like they really need a win today.", value: "F" },
+      { text: "🔵 You offer to share it 50/50. Fairness is key, even with fruit.", value: "T" }
     ]
   },
   {
     id: 4,
-    question: "🐨 Australia: Glitter Canyon Detour",
-    description: "On your path through the glowing gumtree forest, a glittery canyon opens up. Your map says, ‘Not Recommended.’ But the canyon is humming a fun song.",
+    question: "🦋 Blue Mountains: Trail of Two Maps",
+    description: "In the Blue Mountains, a friendly local hands you two trail maps. One is neatly marked with estimated timings and lookout points. The other is just… a doodle of a butterfly.",
     choices: [
-      { text: "Better stick to the trail — plans exist for a reason.", value: "J" },
-      { text: "The canyon looks fun. Let’s wing it.", value: "P" }
+      { text: "🟣 Go with the clear map. You want to see everything, properly.", value: "J" },
+      { text: "🔵 The butterfly route looks fun. Worst case, I get mildly lost.", value: "P" }
     ]
   },
   {
     id: 5,
-    question: "📦 General: Packing for Earth",
-    description: "Before takeoff, you pack your cloud-luggage. But it’s overflowing.",
+    question: "🎵 Packing with a Personality",
+    description: "You're packing for a week-long escape. Your suitcase keeps trying to zip itself shut while humming classical music.",
     choices: [
-      { text: "You list out essentials and reorganise it by category.", value: "J" },
-      { text: "You toss in random things and trust the vibes to sort themselves.", value: "P" }
+      { text: "🟣 Sort by socks, tops, snacks, and backup snacks. Everything has a home.", value: "J" },
+      { text: "🔵 Throw in your favorites and let the suitcase vibe it out.", value: "P" }
     ]
   },
   {
     id: 6,
-    question: "🧋 Malaysia: Infinite Boba Alley",
-    description: "A street in KL is lined with 500 boba stalls. One promises ‘Best Seller 5 years running.’ The other says ‘Flavour unknown until tasted.’",
+    question: "🧁 Penang: Dessert Decision",
+    description: "At a Penang dessert alley, two stalls beckon. One is the “5-Year Boba Champion.” The other glows gently and just says, “???”",
     choices: [
-      { text: "Pick the bestseller. Tried and tested is always good.", value: "S" },
-      { text: "Take the mystery cup. Life’s too short for repeats.", value: "N" }
+      { text: "🟣 Go for the champ. There's a reason it won.", value: "S" },
+      { text: "🔵 Try the mystery. What if it tastes like dreams?", value: "N" }
     ]
   },
   {
     id: 7,
-    question: "🛫 General: Flight Delay Decision",
-    description: "Your cloud-flight is delayed 4 hours. Another traveller is panicking loudly beside you.",
+    question: "🧼 Seoul: Terminal Emotions",
+    description: "A flight delay strands you in Seoul. A nearby traveler is spiraling, dramatically. Their neck pillow is crying.",
     choices: [
-      { text: "You give them your seat and ask the gate agent for help on their behalf.", value: "F" },
-      { text: "You point them to the info screen and return to your book. Efficiency first.", value: "T" }
+      { text: "🟣 You comfort them with a tissue and stories of your weirdest layover.", value: "F" },
+      { text: "🔵 You show them how to rebook and return to your checklist. Sorted.", value: "T" }
     ]
   },
   {
     id: 8,
-    question: "🏮 China: Lantern Market Chase",
-    description: "A magical lantern zooms off into a side alley, trailing sparkles and coins. The vendor shouts: ‘Anyone brave enough can catch it!’",
+    question: "🛵 Bangkok: Scooter of Surprises",
+    description: "While exploring a Bangkok market, a scooter pulls up with a sign: “Next stop: the unexpected.”",
     choices: [
-      { text: "You sprint off immediately. This is clearly an adventure.", value: "E" },
-      { text: "You watch from afar. That alley looks a bit too much for today.", value: "I" }
+      { text: "🟣 You hop on immediately. Could be amazing.", value: "E" },
+      { text: "🔵 You wave it off. You’d rather keep exploring on foot, one stall at a time.", value: "I" }
     ]
   },
   {
     id: 9,
-    question: "🎒 General: Unexpected Layover in the Sky",
-    description: "You’re rerouted to a floating hotel with no itinerary. You can:",
+    question: "🖍️ Sydney: Crayon Your Day",
+    description: "In Sydney, your day is wide open. A local hands you a crayon and says: “Map your day.”",
     choices: [
-      { text: "Use the time to explore whatever you feel like, hour by hour.", value: "P" },
-      { text: "Draw up a checklist of spots to visit and tick them off one by one.", value: "J" }
+      { text: "🟣 You draw a timeline: café → museum → sunset lookout.", value: "J" },
+      { text: "🔵 You doodle a spiral and see where it takes you.", value: "P" }
     ]
   },
   {
     id: 10,
-    question: "🎶 Korea: Street Stage Surprise",
-    description: "In a neon-soaked alley, a street band invites you on stage. The mic floats to you, glowing softly.",
+    question: "🎤 Taipei: Karaoke Possession",
+    description: "At a night market in Taipei, a karaoke machine starts singing on its own and floats a mic toward you.",
     choices: [
-      { text: "You sing. Loudly. You’re not even sure of the lyrics.", value: "E" },
-      { text: "You smile and float back. Singing’s for someone else.", value: "I" }
+      { text: "🟣 You grab it, strike a pose, and sing whatever your voice remembers.", value: "E" },
+      { text: "🔵 You smile and let someone else have their moment.", value: "I" }
     ]
   },
   {
     id: 11,
-    question: "🧼 Bali: Temple Towel Puzzle",
-    description: "At a breezy clifftop temple in Bali, you’re given a sarong with strange symbols. The priest whispers, ‘Wrap it how you wish. The cloth will guide you.’",
+    question: "🎎 Osaka: Yukata Freestyle",
+    description: "In Osaka, you rent a yukata with no instructions. The shopkeeper just says, “Do what feels right.”",
     choices: [
-      { text: "You observe how others are tying it and follow the most common way.", value: "S" },
-      { text: "You fold it into a shape no one else is doing — maybe it unlocks something.", value: "N" }
+      { text: "🟣 You sneak peeks at others and copy the cleanest look.", value: "S" },
+      { text: "🔵 You tie yours like a sash-meets-headband. Why not?", value: "N" }
     ]
   },
   {
     id: 12,
-    question: "🔮 General: The Magical Receipt",
-    description: "After a meal at a rainbow hawker stall, your receipt reveals more than the total — it offers one of two life insights:",
+    question: "🐈 Jeju: Advice Booth Cat",
+    description: "You’re in Jeju and stumble upon a tiny roadside “Advice Booth.” Inside, a sleepy old cat offers you one of two napkin scribbles before dozing off again. Which note do you keep?",
     choices: [
-      { text: "‘Next time, consider how they felt.’", value: "F" },
-      { text: "‘Next time, calculate the cost of hesitation.’", value: "T" }
+      { text: "🟣 “Sometimes, how you make someone feel is the whole story.”", value: "F" },
+      { text: "🔵 “Sometimes, decisions are just puzzles with missing numbers.”", value: "T" }
     ]
   },
   {
     id: 13,
-    question: "💸 Earth Arrival: The Currency Cloud",
-    description: "Just before landing on Earth, you float through a glowing cloud filled with swirling coins and credit cards. A mysterious voice offers you two tools:",
+    question: "🎁 Ryokan Farewell Charm",
+    description: "While checking out of your ryokan, the innkeeper hands you a farewell gift: a travel companion charm. You must choose one.",
     choices: [
-      { text: "A magical purple card that auto-locks the best rates with no extra thinking.", value: "F" },
-      { text: "A golden rate scroll that lets you compare every option manually — if you have the time.", value: "T" }
+      { text: "🟣 A charm that guides you by feeling — no maps, just vibes and lucky moments.", value: "F" },
+      { text: "🔵 A charm that tracks deals, routes, and plans with precision and clarity.", value: "T" }
     ]
   }
 ];
