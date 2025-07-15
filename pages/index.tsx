@@ -14,7 +14,9 @@ export default function Home() {
   }
 
   return (
-    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#7041F2] to-[#10DBAC] flex items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden">
+
+    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden">
+
       
       {/* Sparkling animated background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
