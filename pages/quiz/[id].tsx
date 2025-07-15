@@ -50,9 +50,16 @@ export default function QuizQuestion() {
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="w-full max-w-xl bg-[#7041F2] text-white shadow-xl rounded-3xl p-8 border border-white/10"
       >
-      <h2 className="text-lg md:text-xl font-medium text-white mb-6 leading-relaxed">
-  {question.description}
-</h2>
+   <h1 className="text-lg md:text-xl font-semibold mb-4 text-[#10DBAC]">
+  {question.question}
+</h1>
+
+{question.description && (
+  <h2 className="text-base md:text-lg font-normal text-white mb-6 leading-relaxed">
+    {question.description}
+  </h2>
+)}
+
 
 
         <div className="flex flex-col gap-4">
@@ -62,7 +69,8 @@ export default function QuizQuestion() {
   onClick={() => handleAnswer(choice.value)}
   whileTap={{ scale: 0.97 }}
   whileHover={{ scale: 1.02 }}
-  className="w-full bg-[#10DBAC] text-[#7041F2] font-semibold px-4 py-3 rounded-xl shadow-md hover:bg-white hover:text-[#7041F2] transition-all duration-200"
+  className="w-full bg-white text-[#7041F2] font-semibold px-4 py-3 rounded-xl shadow-md hover:brightness-110 transition-all duration-200"
+  style={{ textShadow: '0 0 6px rgba(255, 255, 255, 0.6)' }}
 >
   {choice.text}
 </motion.button>

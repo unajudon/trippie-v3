@@ -1,119 +1,110 @@
 export const questions = [
   {
     id: 1,
-    question: "🧳 Changi Lost & Found",
-    description: "You blink awake inside a dusty suitcase, deep in Changi’s lost-and-found. Outside, a family of pigeons is debating which hawker stall to visit. One spots you and waves.",
+    question: "🌀 The portal opens. You step into Trippieland and…",
+    description: "",
     choices: [
-      { text: "🟣 You tumble out with a bow. Might as well make your debut.", value: "E" },
-      { text: "🔵 You stay nestled in a sock and observe. Too many feathers, too soon.", value: "I" }
+      { text: "Run straight into the crowd — there’s music, stalls, and strangers to meet", value: "E" },
+      { text: "Take a moment at the Welcome Fountain and take in your surroundings", value: "I" }
     ]
   },
   {
     id: 2,
-    question: "🍣 Tokyo: Memory Conveyor Café",
-    description: "In Tokyo, you’re invited to a conveyor belt café that serves memories instead of food. One plate shows your dream job. Another is… blank, with sparkles.",
+    question: "🍈 A floating durian offers you a ride. What do you do?",
+    description: "",
     choices: [
-      { text: "🟣 Take the dream job plate. It’s oddly comforting to see it spelled out.", value: "S" },
-      { text: "🔵 Pick the blank one. Who needs spoilers?", value: "N" }
+      { text: "Hop on and shout, “YASSS adventure!”", value: "E" },
+      { text: "Politely decline but observe it closely – how does it float?", value: "I" }
     ]
   },
   {
     id: 3,
-    question: "🥭 Chiang Mai: Smoothie Standoff",
-    description: "In Chiang Mai, a levitating mango smoothie hovers between you and another traveler. You both reach at the same time.",
+    question: "🌿 The path splits: Left leads to boba street, right to a whispering forest of dreams. You choose...",
+    description: "",
     choices: [
-      { text: "🟣 You nudge it toward them. They seem like they really need a win today.", value: "F" },
-      { text: "🔵 You offer to share it 50/50. Fairness is key, even with fruit.", value: "T" }
+      { text: "Boba land — smells, sights, let’s gooo!", value: "S" },
+      { text: "The forest — something about it feels... destined", value: "N" }
     ]
   },
   {
     id: 4,
-    question: "🦋 Blue Mountains: Trail of Two Maps",
-    description: "In the Blue Mountains, a friendly local hands you two trail maps. One is neatly marked with estimated timings and lookout points. The other is just… a doodle of a butterfly.",
+    question: "🥠 You enter a fortune-cookie cavern. Your fortune says:",
+    description: "",
     choices: [
-      { text: "🟣 Go with the clear map. You want to see everything, properly.", value: "J" },
-      { text: "🔵 The butterfly route looks fun. Worst case, I get mildly lost.", value: "P" }
+      { text: "“Enjoy today’s tastes. The best bites are in the now.”", value: "S" },
+      { text: "“Trust the stars. Adventure is written in your future.”", value: "N" }
     ]
   },
   {
     id: 5,
-    question: "🎵 Packing with a Personality",
-    description: "You're packing for a week-long escape. Your suitcase keeps trying to zip itself shut while humming classical music.",
+    question: "🗺️ You find an old map with cryptic symbols. What excites you most?",
+    description: "",
     choices: [
-      { text: "🟣 Sort by socks, tops, snacks, and backup snacks. Everything has a home.", value: "J" },
-      { text: "🔵 Throw in your favorites and let the suitcase vibe it out.", value: "P" }
+      { text: "Finding real-world landmarks to match them", value: "S" },
+      { text: "Decoding the hidden meaning and secrets behind it", value: "N" }
     ]
   },
   {
     id: 6,
-    question: "🧁 Penang: Dessert Decision",
-    description: "At a Penang dessert alley, two stalls beckon. One is the “5-Year Boba Champion.” The other glows gently and just says, “???”",
+    question: "☁️ You discover a baby cloud lost near the Sky Bazaar. What do you do?",
+    description: "",
     choices: [
-      { text: "🟣 Go for the champ. There's a reason it won.", value: "S" },
-      { text: "🔵 Try the mystery. What if it tastes like dreams?", value: "N" }
+      { text: "Build a step-by-step plan to return it to Cloud HQ, efficiently and safely", value: "T" },
+      { text: "Hug it first, give it a name, “you’re safe now”", value: "F" }
     ]
   },
   {
     id: 7,
-    question: "🧼 Seoul: Terminal Emotions",
-    description: "A flight delay strands you in Seoul. A nearby traveler is spiraling, dramatically. Their neck pillow is crying.",
+    question: "💌 Your friend wants to detour to a love-letter lagoon, but it’ll mess up your route. You…",
+    description: "",
     choices: [
-      { text: "🟣 You comfort them with a tissue and stories of your weirdest layover.", value: "F" },
-      { text: "🔵 You show them how to rebook and return to your checklist. Sorted.", value: "T" }
+      { text: "Explain the impact on timing and suggest alternatives", value: "T" },
+      { text: "Agree to go — they’ve had a rough day and could use the joy", value: "F" }
     ]
   },
   {
     id: 8,
-    question: "🛵 Bangkok: Scooter of Surprises",
-    description: "While exploring a Bangkok market, a scooter pulls up with a sign: “Next stop: the unexpected.”",
+    question: "🐉 A giant bubble dragon blocks your path. How do you approach it?",
+    description: "",
     choices: [
-      { text: "🟣 You hop on immediately. Could be amazing.", value: "E" },
-      { text: "🔵 You wave it off. You’d rather keep exploring on foot, one stall at a time.", value: "I" }
+      { text: "Analyse its behaviour, look for patterns, and test a strategic distraction", value: "T" },
+      { text: "Offer it a heartfelt compliment and a glitter snack to calm its nerves", value: "F" }
     ]
   },
   {
     id: 9,
-    question: "🖍️ Sydney: Crayon Your Day",
-    description: "In Sydney, your day is wide open. A local hands you a crayon and says: “Map your day.”",
+    question: "📜 You’re handed a blank Trippieland schedule scroll. What do you do?",
+    description: "",
     choices: [
-      { text: "🟣 You draw a timeline: café → museum → sunset lookout.", value: "J" },
-      { text: "🔵 You doodle a spiral and see where it takes you.", value: "P" }
+      { text: "Fill in every slot with must-sees, colour-coded and laminated", value: "J" },
+      { text: "Draw a giant doodle and go wherever the wind blows", value: "P" }
     ]
   },
   {
     id: 10,
-    question: "🎤 Taipei: Karaoke Possession",
-    description: "At a night market in Taipei, a karaoke machine starts singing on its own and floats a mic toward you.",
+    question: "🪙 Your group of Trippies are deciding where to go next. Your vibe is…",
+    description: "",
     choices: [
-      { text: "🟣 You grab it, strike a pose, and sing whatever your voice remembers.", value: "E" },
-      { text: "🔵 You smile and let someone else have their moment.", value: "I" }
+      { text: "“We’ve got a route! Let’s stick to the plan.”", value: "J" },
+      { text: "“Let’s flip a coin. Chaos breeds stories.”", value: "P" }
     ]
   },
   {
     id: 11,
-    question: "🎎 Osaka: Yukata Freestyle",
-    description: "In Osaka, you rent a yukata with no instructions. The shopkeeper just says, “Do what feels right.”",
+    question: "🚂 You missed your train — oops. What now?",
+    description: "",
     choices: [
-      { text: "🟣 You sneak peeks at others and copy the cleanest look.", value: "S" },
-      { text: "🔵 You tie yours like a sash-meets-headband. Why not?", value: "N" }
+      { text: "Calmly check the next schedule and contingency plans", value: "J" },
+      { text: "Take it as a sign to explore the random floating teahouse nearby", value: "P" }
     ]
   },
   {
     id: 12,
-    question: "🐈 Jeju: Advice Booth Cat",
-    description: "You’re in Jeju and stumble upon a tiny roadside “Advice Booth.” Inside, a sleepy old cat offers you one of two napkin scribbles before dozing off again. Which note do you keep?",
+    question: "🌈 You’re leaving Trippieland. What are you doing mid-portal jump?",
+    description: "",
     choices: [
-      { text: "🟣 “Sometimes, how you make someone feel is the whole story.”", value: "F" },
-      { text: "🔵 “Sometimes, decisions are just puzzles with missing numbers.”", value: "T" }
-    ]
-  },
-  {
-    id: 13,
-    question: "🎁 Ryokan Farewell Charm",
-    description: "While checking out of your ryokan, the innkeeper hands you a farewell gift: a travel companion charm. You must choose one.",
-    choices: [
-      { text: "🟣 A charm that guides you by feeling — no maps, just vibes and lucky moments.", value: "F" },
-      { text: "🔵 A charm that tracks deals, routes, and plans with precision and clarity.", value: "T" }
+      { text: "Posting your highlight reel with magical emojis", value: "E" },
+      { text: "Reflecting quietly, replaying moments in your mind", value: "I" }
     ]
   }
 ];

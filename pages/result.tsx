@@ -61,18 +61,24 @@ export default function Result() {
 
   <div className="flex flex-col sm:flex-row gap-4 mt-6 justify-center">
     <button
-      onClick={() => {
-        const shareText = encodeURIComponent(
-          `I'm the ${result.name} Trippie! 🧳✨ Find out yours:`
-        );
-        const url = encodeURIComponent('https://trippie-v3.vercel.app');
-        const tweetUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${url}`;
-        window.open(tweetUrl, '_blank');
-      }}
-      className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-2xl shadow hover:bg-purple-700 transition"
-    >
-      Share My Result
-    </button>
+  onClick={() => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: 'Discover your Trippie!',
+          text: 'I just found my Trippie type — it’s surprisingly accurate 🧳✨',
+          url: 'https://trippie-v3.vercel.app',
+        })
+        .catch((error) => console.error('Sharing failed:', error));
+    } else {
+      alert('Sharing not supported on this device.');
+    }
+  }}
+  className="bg-[#10DBAC] text-white font-semibold px-6 py-3 rounded-2xl shadow hover:bg-[#0cc69c] transition"
+>
+  Share My Result
+</button>
+
 
     <a
       href="/all-trippies"
