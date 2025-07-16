@@ -2,6 +2,7 @@ export const questions = [
   {
     id: 1,
     question: "🌀 The portal opens. You step into Trippieland and…",
+     image: "/images/question-1.png",
     description: "",
     choices: [
       { text: "Run straight into the crowd — there’s music, stalls, and strangers to meet", value: "E" },
@@ -12,6 +13,7 @@ export const questions = [
     id: 2,
     question: "🍈 A floating durian offers you a ride. What do you do?",
     description: "",
+    image: "/images/question-2.png",
     choices: [
       { text: "Hop on and shout, “YASSS adventure!”", value: "E" },
       { text: "Politely decline but observe it closely – how does it float?", value: "I" }
@@ -21,6 +23,7 @@ export const questions = [
     id: 3,
     question: "🌿 The path splits: Left leads to boba street, right to a whispering forest of dreams. You choose...",
     description: "",
+
     choices: [
       { text: "Boba land — smells, sights, let’s gooo!", value: "S" },
       { text: "The forest — something about it feels... destined", value: "N" }

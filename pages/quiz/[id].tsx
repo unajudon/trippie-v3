@@ -1,4 +1,3 @@
-// pages/quiz/[id].tsx
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { questions } from '@/lib/questions';
@@ -41,51 +40,55 @@ export default function QuizQuestion() {
   }
 
   return (
-<main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-start justify-center pt-16 md:pt-24 px-4 font-poppins text-white overflow-hidden">
-
+    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-start justify-center pt-12 md:pt-20 px-3 font-poppins text-white overflow-hidden">
       <motion.div
         key={question.id}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
-        className="w-full max-w-xl bg-[#7041F2] text-white shadow-xl rounded-3xl p-8 border border-white/10"
+        className="w-full max-w-xl bg-[#7041F2] text-white shadow-xl rounded-2xl p-5 md:p-6 border border-white/10"
       >
-   <h1 className="text-lg md:text-xl font-semibold mb-4 text-[#10DBAC]">
-  {question.question}
-</h1>
+        <h1 className="text-base md:text-lg font-semibold mb-3 text-[#10DBAC]">
+          {question.question}
+        </h1>
 
-{question.description && (
-  <h2 className="text-base md:text-lg font-normal text-white mb-6 leading-relaxed">
-    {question.description}
-  </h2>
-)}
+        {question.description && (
+          <h2 className="text-sm md:text-base font-normal text-white mb-4 leading-relaxed">
+            {question.description}
+          </h2>
+        )}
 
+        {question.image && (
+          <img
+            src={question.image}
+            alt="Question visual"
+            className="w-full h-auto rounded-xl mb-4 shadow-md"
+          />
+        )}
 
-
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           {question.choices.map((choice, idx) => (
-           <motion.button
-  key={idx}
-  onClick={() => handleAnswer(choice.value)}
-  whileTap={{ scale: 0.97 }}
-  whileHover={{ scale: 1.02 }}
-  className="w-full bg-white text-[#7041F2] font-semibold px-4 py-3 rounded-xl shadow-md hover:brightness-110 transition-all duration-200"
-  style={{ textShadow: '0 0 6px rgba(255, 255, 255, 0.6)' }}
->
-  {choice.text}
-</motion.button>
+            <motion.button
+              key={idx}
+              onClick={() => handleAnswer(choice.value)}
+              whileTap={{ scale: 0.97 }}
+              whileHover={{ scale: 1.02 }}
+              className="w-full bg-white text-[#7041F2] text-sm font-semibold px-3 py-2 rounded-lg shadow hover:brightness-105 transition-all duration-200"
+              style={{ textShadow: '0 0 4px rgba(255, 255, 255, 0.4)' }}
+            >
+              {choice.text}
+            </motion.button>
           ))}
         </div>
 
-        {/* Progress bar */}
-        <div className="w-full h-2 bg-white/20 rounded-full mt-6 mb-2 overflow-hidden">
+        <div className="w-full h-2 bg-white/20 rounded-full mt-5 mb-2 overflow-hidden">
           <div
             className="h-full bg-white transition-all duration-300"
             style={{ width: `${((questionIndex + 1) / questions.length) * 100}%` }}
           />
         </div>
 
-        <p className="text-sm text-white/60 mt-6 text-right">
+        <p className="text-xs text-white/60 mt-3 text-right">
           Question {questionIndex + 1} of {questions.length}
         </p>
       </motion.div>
