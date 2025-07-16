@@ -41,7 +41,7 @@ export default function QuizQuestion() {
   }
 
   return (
-   <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden">
+<main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-start justify-center pt-16 md:pt-24 px-4 font-poppins text-white overflow-hidden">
 
       <motion.div
         key={question.id}

@@ -31,8 +31,9 @@ export default function Home() {
   initial={{ opacity: 0, scale: 0.95 }}
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.6, ease: 'easeOut' }}
-  className="w-full max-w-md h-[85vh] rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative"
+  className="relative z-10 w-full max-w-md h-[85vh] rounded-3xl overflow-hidden shadow-2xl border border-white/10 -mt-8 md:mt-0"
 >
+
   {/* Background image inside card */}
   <div
     className="absolute inset-0 bg-cover bg-top rounded-3xl"
