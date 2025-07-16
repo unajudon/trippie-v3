@@ -1,5 +1,3 @@
-'use client';
-
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { SparklesCore } from '@/components/ui/sparkles';
@@ -10,15 +8,14 @@ export default function Home() {
 
   function handleStart() {
     localStorage.removeItem('trippie-answers');
-    router.push('/quiz/1');
+    router.push('/story');
   }
 
   return (
-
-    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden">
-
-      
-      {/* Sparkling animated background */}
+    <main
+      className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden"
+    >
+      {/* Sparkles background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <SparklesCore
           background="transparent"
@@ -30,52 +27,61 @@ export default function Home() {
         />
       </div>
 
-      {/* Main card */}
+      {/* Main image card with parallax */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: 'easeOut' }}
-        className="relative z-10 w-full max-w-xl bg-[#7041F2] text-white shadow-2xl rounded-3xl p-10 border border-white/10"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="relative z-10 w-full max-w-md h-[85vh] rounded-3xl overflow-hidden shadow-2xl border border-white/10"
       >
-        <motion.h1
-  className="text-3xl md:text-4xl font-bold mb-4 leading-snug flex items-center gap-2 text-[#10DBAC] drop-shadow-[0_0_10px_#10DBAC]"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.3 }}
->
-  <SparkleIcon className="w-6 h-6 animate-pulse text-[#10DBAC]" />
-  what kind of trippie are you?
-</motion.h1>
+        {/* Image background with parallax inside card */}
+        {/* Image background with parallax inside card */}
+<div
+  className="absolute inset-0 w-full h-full bg-fixed bg-center"
+  style={{
+    backgroundImage: 'url("/images/suitcase-bg.png")',
+    backgroundSize: '120%', // Slight zoom-out compared to cover
+    backgroundRepeat: 'no-repeat',
+  }}
+/>
 
 
-        <motion.p
-          className="text-base md:text-lg mb-6 text-white/90"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          You hatched in an abandoned suitcase clutching a mysterious purple card and no clue.
-          <br />
-          Now you’re wandering the Earth, snack first, questions later.
-          <br />
-          Time to find your Trippie kind.
-        </motion.p>
+        {/* Gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10 z-0" />
 
-        <motion.button
-          onClick={handleStart}
-          whileTap={{ scale: 0.95 }}
-          className="w-full bg-white/20 text-white font-medium px-6 py-3 rounded-xl shadow-md hover:bg-white hover:text-[#7041F2] transition-all duration-200 animate-pulse-slow"
-        >
-          ✨ Start the Quiz ✨
-        </motion.button>
+        {/* Card content */}
+        <div className="relative z-10 flex flex-col justify-between h-full p-6 text-center text-white">
+          <div className="mt-4">
+            <h1 className="text-3xl font-bold mb-4 text-[#10EDD0] drop-shadow-[0_0_8px_#10EDD0] flex items-center justify-center gap-2">
+              <SparkleIcon className="w-6 h-6 text-white animate-pulse" />
+              Discover Your Trippie
+            </h1>
 
+            <p className="text-base md:text-lg text-white/90 leading-relaxed">
+              There are many kinds of Trippies.
+              <br />
+              Each one sees the world differently.
+              <br />
+              <strong className="text-white">Ready to find out which one you are?</strong>
+            </p>
+          </div>
+
+          <motion.button
+            onClick={handleStart}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-6 w-full bg-[#10DBAC] text-[#3E1F92] font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-white hover:text-[#3E1F92] transition-all duration-200"
+          >
+            Let’s Begin ✨
+          </motion.button>
+        </div>
       </motion.div>
 
-      {/* Floating Trippie card */}
+      {/* Floating trippie card image */}
       <motion.img
         src="/card-float.png"
         alt="Trippie Card"
-        className="absolute bottom-6 right-6 w-20 h-auto opacity-80 z-0"
+        className="absolute bottom-6 right-6 w-20 h-auto opacity-80 z-10"
         animate={{ y: [0, -10, 0] }}
         transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
       />
