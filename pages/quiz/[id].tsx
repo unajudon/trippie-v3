@@ -59,12 +59,13 @@ export default function QuizQuestion() {
         )}
 
         {question.image && (
-          <img
-            src={question.image}
-            alt="Question visual"
-            className="w-full h-auto rounded-xl mb-4 shadow-md"
-          />
-        )}
+  <img
+    src={question.image}
+    alt="Question visual"
+    className="w-4/5 max-w-sm mx-auto h-auto rounded-xl mb-4 shadow-md"
+  />
+)}
+
 
         <div className="flex flex-col gap-3">
           {question.choices.map((choice, idx) => (
