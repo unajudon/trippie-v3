@@ -37,17 +37,14 @@ export default function Home() {
         {/* Image background with parallax inside card */}
         {/* Image background with parallax inside card */}
 <div
-  className="absolute inset-0 w-full h-full bg-fixed bg-center"
-  style={{
-    backgroundImage: 'url("/images/suitcase-bg.png")',
-    backgroundSize: '120%', // Slight zoom-out compared to cover
-    backgroundRepeat: 'no-repeat',
-  }}
-/>
+  className="absolute inset-0 bg-cover bg-top"
+  style={{ backgroundImage: 'url("/images/suitcase-bg.png")' }}
+></div>
+
 
 
         {/* Gradient overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/10 z-0" />
+<div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-[#1E0A4F]/90 to-transparent z-10" />
 
         {/* Card content */}
         <div className="relative z-10 flex flex-col justify-between h-full p-6 text-center text-white">
