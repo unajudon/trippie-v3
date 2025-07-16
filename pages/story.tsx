@@ -51,13 +51,14 @@ export default function StoryPage() {
 
         {/* Begin Journey Button */}
         <motion.button
-          onClick={handleBegin}
-          whileTap={{ scale: 0.97 }}
-          whileHover={{ scale: 1.02 }}
-          className="w-full bg-white text-[#7041F2] text-sm font-semibold px-3 py-2 rounded-lg shadow hover:bg-[#10DBAC] hover:text-white transition-all duration-200"
-        >
-          Begin Journey
-        </motion.button>
+  onClick={handleBegin}
+  whileTap={{ scale: 0.97 }}
+  whileHover={{ scale: 1.02 }}
+  className="w-full bg-white text-[#7041F2] text-base font-semibold px-4 py-3 rounded-xl shadow hover:bg-[#10DBAC] hover:text-white transition-all duration-200"
+>
+  Begin Journey
+</motion.button>
+
       </motion.div>
     </main>
   );
