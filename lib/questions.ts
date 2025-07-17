@@ -1,7 +1,7 @@
 export const questions = [
   {
     id: 1,
-    question: "🌀 The portal opens. You step into Trippieland and…",
+    question: "🌀 A portal opens. You step into Trippieland and…",
      image: "/images/question-1.png",
     description: "",
     choices: [
@@ -21,7 +21,7 @@ export const questions = [
   },
   {
     id: 3,
-    question: "🌿 The path splits: Left leads to boba street, right to a whispering forest of dreams. You choose...",
+    question: "🌿 The path splits: Left leads to boba street, right to a forest of dreams. You choose...",
     description: "",
      image: "/images/question-3.png",
     choices: [
@@ -29,17 +29,19 @@ export const questions = [
       { text: "The forest — something about it feels... destined", value: "N" }
     ]
   },
-  {
-    id: 4,
-    question: "🥠 You enter a fortune-cookie cavern. Your fortune says:",
+   {
+    id: 6,
+    question: "☁️ You discover a baby cloud lost near the Sky market. What do you do?",
     description: "",
-         image: "/images/question-4.png",
+         image: "/images/question-6.png",
 
     choices: [
-      { text: "“Enjoy today’s tastes. The best bites are in the now.”", value: "S" },
-      { text: "“Trust the stars. Adventure is written in your future.”", value: "N" }
+      { text: "Build a step-by-step plan to return it to Cloud HQ, efficiently and safely", value: "T" },
+      { text: "Hug it first, give it a name, “you’re safe now”", value: "F" }
     ]
   },
+  
+  
   {
     id: 5,
     question: "🗺️ You find an old map with cryptic symbols. What excites you most?",
@@ -51,26 +53,27 @@ export const questions = [
       { text: "Decoding the hidden meaning and secrets behind it", value: "N" }
     ]
   },
-  {
-    id: 6,
-    question: "☁️ You discover a baby cloud lost near the Sky Bazaar. What do you do?",
+
+   {
+    id: 7,
+    question: "🪙 Your group of Trippies are deciding where to go next. Your vibe is…",
     description: "",
-         image: "/images/question-6.png",
+         image: "/images/question-10.png",
 
     choices: [
-      { text: "Build a step-by-step plan to return it to Cloud HQ, efficiently and safely", value: "T" },
-      { text: "Hug it first, give it a name, “you’re safe now”", value: "F" }
+      { text: "“We’ve got a route! Let’s stick to the plan.”", value: "J" },
+      { text: "“Let’s flip a coin. Chaos breeds stories.”", value: "P" }
     ]
   },
-  {
-    id: 7,
-    question: "💌 Your friend wants to detour to a love-letter lagoon, but it’ll mess up your route. You…",
+   {
+    id: 4,
+    question: "🥠 You enter a fortune-cookie cavern. Your fortune says:",
     description: "",
-         image: "/images/question-7.png",
+         image: "/images/question-4.png",
 
     choices: [
-      { text: "Explain the impact on timing and suggest alternatives", value: "T" },
-      { text: "Agree to go — they’ve had a rough day and could use the joy", value: "F" }
+      { text: "“Enjoy today’s tastes. The best bites are in the now.”", value: "S" },
+      { text: "“Trust the stars. Adventure is written in your future.”", value: "N" }
     ]
   },
   {
@@ -86,7 +89,7 @@ export const questions = [
   },
   {
     id: 9,
-    question: "📜 You’re handed a blank Trippieland schedule scroll. What do you do?",
+    question: "📜 You’re handed a blank schedule scroll. What do you do?",
     description: "",
          image: "/images/question-9.png",
 
@@ -97,15 +100,16 @@ export const questions = [
   },
   {
     id: 10,
-    question: "🪙 Your group of Trippies are deciding where to go next. Your vibe is…",
+    question: "💌 Your friend wants to detour to a love-letter lagoon, but it’ll mess up your route. You…",
     description: "",
-         image: "/images/question-10.png",
+         image: "/images/question-7.png",
 
     choices: [
-      { text: "“We’ve got a route! Let’s stick to the plan.”", value: "J" },
-      { text: "“Let’s flip a coin. Chaos breeds stories.”", value: "P" }
+      { text: "Explain the impact on timing and suggest alternatives", value: "T" },
+      { text: "Agree to go — they’ve had a rough day and could use the joy", value: "F" }
     ]
   },
+ 
   {
     id: 11,
     question: "🚂 You missed your train — oops. What now?",
