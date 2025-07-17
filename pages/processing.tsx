@@ -44,11 +44,17 @@ export default function ProcessingPage() {
         </h2>
 
         {/* Image Placeholder */}
-        <img
-          src="/images/processing.jpeg" // Replace this with your actual image
-          alt="Floating dragons analyzing"
-          className="w-full h-auto rounded-xl mb-5 shadow-md"
-        />
+        <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  className="w-full h-auto rounded-xl mb-5 shadow-md"
+>
+  <source src="/videos/processing-video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 
         {/* Reveal Button */}
         <motion.button

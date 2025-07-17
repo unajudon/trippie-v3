@@ -33,7 +33,7 @@ export default function StoryPage() {
       >
         {/* Header Text */}
         <h1 className="text-sm md:text-base font-semibold mb-4 text-[#10DBAC]">
-          🌟 You hatched inside an abandoned suitcase, hidden in a quiet corner of Changi Airport…<br />
+          🌟 You hatched inside an abandoned suitcase, hidden in a quiet corner of Changi Airport… 
           No memory. Just a soft glow…
         </h1>
 
