@@ -11,7 +11,7 @@ export default function StoryPage() {
   }
 
   return (
-    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-start justify-center pt-12 md:pt-20 px-3 font-poppins text-white overflow-hidden">
+<main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-start pt-10 md:pt-16 px-4 font-poppins text-white overflow-hidden space-y-6">
 
       {/* Sparkling background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -44,7 +44,7 @@ export default function StoryPage() {
 
         {/* Story Image */}
         <img
-          src="/images/story-square.png"
+          src="/images/story-square.jpeg"
           alt="Trippie Story"
           className="w-full h-auto rounded-xl mb-5 shadow-md"
         />
@@ -60,6 +60,16 @@ export default function StoryPage() {
 </motion.button>
 
       </motion.div>
+
+      {/* YouTrip logo under the card */}
+<img
+  src="/images/youtrip-logo.png"
+  alt="YouTrip Logo"
+  className="w-24 md:w-28 h-auto opacity-80"
+/>
+
+
+      
     </main>
   );
 }

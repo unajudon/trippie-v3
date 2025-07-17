@@ -40,7 +40,7 @@ export default function QuizQuestion() {
   }
 
   return (
-    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-start justify-center pt-12 md:pt-20 px-3 font-poppins text-white overflow-hidden">
+<main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-start pt-16 md:pt-24 px-4 font-poppins text-white overflow-hidden space-y-6">
       <motion.div
         key={question.id}
         initial={{ opacity: 0, y: 30 }}
@@ -93,6 +93,13 @@ export default function QuizQuestion() {
           Question {questionIndex + 1} of {questions.length}
         </p>
       </motion.div>
+      {/* YouTrip logo under the card */}
+<img
+  src="/images/youtrip-logo.png"
+  alt="YouTrip Logo"
+  className="w-24 md:w-28 h-auto opacity-80"
+/>
+
     </main>
   );
 }

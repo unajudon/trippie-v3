@@ -2,7 +2,7 @@ export const questions = [
   {
     id: 1,
     question: "🌀 A portal opens. You step into Trippieland and…",
-     image: "/images/question-1.png",
+     image: "/images/question-1.jpeg",
     description: "",
     choices: [
       { text: "Run straight into the crowd — there’s music, stalls, and strangers to meet", value: "E" },
@@ -13,7 +13,7 @@ export const questions = [
     id: 2,
     question: "🍈 A floating durian offers you a ride. What do you do?",
     description: "",
-    image: "/images/question-2.png",
+    image: "/images/question-2.jpeg",
     choices: [
       { text: "Hop on and shout, “YASSS adventure!”", value: "E" },
       { text: "Politely decline but observe it closely – how does it float?", value: "I" }
@@ -23,7 +23,7 @@ export const questions = [
     id: 3,
     question: "🌿 The path splits: Left leads to boba street, right to a forest of dreams. You choose...",
     description: "",
-     image: "/images/question-3.png",
+     image: "/images/question-3.jpeg",
     choices: [
       { text: "Boba land — smells, sights, let’s gooo!", value: "S" },
       { text: "The forest — something about it feels... destined", value: "N" }
@@ -33,7 +33,7 @@ export const questions = [
     id: 6,
     question: "☁️ You discover a baby cloud lost near the Sky market. What do you do?",
     description: "",
-         image: "/images/question-6.png",
+         image: "/images/question-6.jpeg",
 
     choices: [
       { text: "Build a step-by-step plan to return it to Cloud HQ, efficiently and safely", value: "T" },
@@ -46,7 +46,7 @@ export const questions = [
     id: 5,
     question: "🗺️ You find an old map with cryptic symbols. What excites you most?",
     description: "",
-         image: "/images/question-5.png",
+         image: "/images/question-5.jpeg",
 
     choices: [
       { text: "Finding real-world landmarks to match them", value: "S" },
@@ -58,7 +58,7 @@ export const questions = [
     id: 7,
     question: "🪙 Your group of Trippies are deciding where to go next. Your vibe is…",
     description: "",
-         image: "/images/question-10.png",
+         image: "/images/question-10.jpeg",
 
     choices: [
       { text: "“We’ve got a route! Let’s stick to the plan.”", value: "J" },
@@ -69,7 +69,7 @@ export const questions = [
     id: 4,
     question: "🥠 You enter a fortune-cookie cavern. Your fortune says:",
     description: "",
-         image: "/images/question-4.png",
+         image: "/images/question-4.jpeg",
 
     choices: [
       { text: "“Enjoy today’s tastes. The best bites are in the now.”", value: "S" },
@@ -80,7 +80,7 @@ export const questions = [
     id: 8,
     question: "🐉 A giant bubble dragon blocks your path. How do you approach it?",
     description: "",
-         image: "/images/question-8.png",
+         image: "/images/question-8.jpeg",
 
     choices: [
       { text: "Analyse its behaviour, look for patterns, and test a strategic distraction", value: "T" },
@@ -91,7 +91,7 @@ export const questions = [
     id: 9,
     question: "📜 You’re handed a blank schedule scroll. What do you do?",
     description: "",
-         image: "/images/question-9.png",
+         image: "/images/question-9.jpeg",
 
     choices: [
       { text: "Fill in every slot with must-sees, colour-coded and laminated", value: "J" },
@@ -102,7 +102,7 @@ export const questions = [
     id: 10,
     question: "💌 Your friend wants to detour to a love-letter lagoon, but it’ll mess up your route. You…",
     description: "",
-         image: "/images/question-7.png",
+         image: "/images/question-7.jpeg",
 
     choices: [
       { text: "Explain the impact on timing and suggest alternatives", value: "T" },
@@ -114,7 +114,7 @@ export const questions = [
     id: 11,
     question: "🚂 You missed your train — oops. What now?",
     description: "",
-         image: "/images/question-11.png",
+         image: "/images/question-11.jpeg",
 
     choices: [
       { text: "Calmly check the next schedule and contingency plans", value: "J" },
@@ -125,7 +125,7 @@ export const questions = [
     id: 12,
     question: "🌈 You’re leaving Trippieland. What are you doing mid-portal jump?",
     description: "",
-         image: "/images/question-12.png",
+         image: "/images/question-12.jpeg",
 
     choices: [
       { text: "Posting your highlight reel with magical emojis", value: "E" },
