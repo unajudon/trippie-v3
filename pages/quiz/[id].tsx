@@ -31,7 +31,8 @@ export default function QuizQuestion() {
     if (questionIndex + 1 < questions.length) {
       router.push(`/quiz/${questionIndex + 2}`);
     } else {
-      router.push('/result');
+      router.push('/processing');
+
     }
   }
 

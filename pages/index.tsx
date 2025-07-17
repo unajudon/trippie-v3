@@ -49,7 +49,7 @@ export default function Home() {
             {/* Push content slightly down */}
             <div className="mt-[18%]">
               <h1 className="text-3xl font-bold mb-4 text-[#10EDD0] drop-shadow-[0_0_8px_#10EDD0] flex items-center justify-center gap-2">
-                <SparkleIcon className="w-6 h-6 text-white animate-pulse" />
+               
                 Discover Your Trippie
               </h1>
 
