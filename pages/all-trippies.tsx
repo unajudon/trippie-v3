@@ -1,24 +1,16 @@
+// pages/all-trippies.tsx
+
 'use client';
 
 import Link from 'next/link';
-import { SparklesCore } from '@/components/ui/sparkles';
+import { SparklesCore } from '@/components/ui/sparkles'; // Assuming the SparklesCore component is set up
 
-const trippies = [
-  { name: 'Monsieur Trippie', slug: 'monsieur-trippie' },
-  { name: 'Baby Egg Trippie', slug: 'baby-egg-trippie' },
-  { name: 'Onigiri Trippie', slug: 'onigiri-trippie' },
-  { name: 'Boba Trippie', slug: 'boba-trippie' },
-  { name: 'Snorkeler Trippie', slug: 'snorkeler-trippie' },
-  { name: 'Bao Trippie', slug: 'bao-trippie' },
-  { name: 'YouTrippy', slug: 'youtrippy' },
-  { name: 'Surfer Trippie', slug: 'surfer-trippie' },
-];
+import { trippies } from '@/lib/trippieData'; // Import your updated trippies data
 
 export default function AllTrippiesPage() {
   return (
     <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden">
-
-    {/* Sparkles background */}
+      {/* Sparkles background */}
       <div className="absolute inset-0 z-0">
         <SparklesCore
           background="transparent"
@@ -32,19 +24,17 @@ export default function AllTrippiesPage() {
 
       {/* Page content */}
       <div className="relative z-10 max-w-5xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
-          Meet All the Trippies
-        </h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">Meet All the Trippies</h1>
 
         <div className="grid grid-cols-2 gap-6">
           {trippies.map((trippie) => (
             <Link
               key={trippie.slug}
-              href={`/trippie/${trippie.slug}`}
+              href={`/trippie/${trippie.slug}`}  // Dynamic link to individual Trippie page
               className="bg-white text-[#7041F2] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300"
             >
               <img
-                src={`/images/${trippie.slug}.jpg`}
+                src={`/images/${trippie.slug}.jpg`}  // Ensure that the images are in the public/images folder
                 alt={trippie.name}
                 className="w-full h-48 object-cover"
               />
