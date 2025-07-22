@@ -1,4 +1,3 @@
-// pages/result.tsx
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { getTrippieResult } from '@/lib/calculateResult';
@@ -12,8 +11,23 @@ export default function Result() {
       try {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length >= 4) {
-          const mbti = getTrippieResult(parsed);
-          setResult(mbti);
+          const mbtiResult = getTrippieResult(parsed);
+          setResult(mbtiResult);
+
+          // Prepare form data for Google Apps Script
+          const form = new URLSearchParams();
+          form.append('TrippieType', mbtiResult.name);
+          form.append('MBTI', mbtiResult.mbti?.join('') || 'Unknown');
+          form.append('Score', parsed.length.toString());
+          form.append('Browser', navigator.userAgent);
+
+          fetch('https://script.google.com/macros/s/AKfycbxpBvUb0y_TaG-gRd7Pb8uTlMylJSaZ2-jUnsWDGjkK_DIiyex3P5vyoyOLgb8LKSWDKg/exec', {
+            method: 'POST',
+            body: form,
+          })
+            .then((res) => res.text())
+            .then((text) => console.log('✅ Logged to Google Sheet:', text))
+            .catch((err) => console.error('❌ Logging failed:', err));
         }
       } catch (err) {
         console.error('Invalid JSON in trippie-answers', err);
