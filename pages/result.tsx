@@ -6,34 +6,40 @@ export default function Result() {
   const [result, setResult] = useState<any>(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem('trippie-answers');
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length >= 4) {
-          const mbtiResult = getTrippieResult(parsed);
-          setResult(mbtiResult);
+  const stored = localStorage.getItem('trippie-answers');
+  if (stored) {
+    try {
+      const parsed = JSON.parse(stored);
+      if (Array.isArray(parsed) && parsed.length >= 4) {
+        const mbtiResult = getTrippieResult(parsed);
+        setResult(mbtiResult);
 
-          // Prepare form data for Google Apps Script
-          const form = new URLSearchParams();
-          form.append('TrippieType', mbtiResult.name);
-          form.append('MBTI', mbtiResult.mbti?.join('') || 'Unknown');
-          form.append('Score', parsed.length.toString());
-          form.append('Browser', navigator.userAgent);
+        // Prepare payload
+        const payload = {
+          TrippieType: mbtiResult.name,
+          MBTI: mbtiResult.mbti?.join('') || 'Unknown',
+          Score: parsed.length.toString(),
+          Browser: navigator.userAgent,
+        };
 
-          fetch('https://script.google.com/macros/s/AKfycbxpBvUb0y_TaG-gRd7Pb8uTlMylJSaZ2-jUnsWDGjkK_DIiyex3P5vyoyOLgb8LKSWDKg/exec', {
-            method: 'POST',
-            body: form,
-          })
-            .then((res) => res.text())
-            .then((text) => console.log('✅ Logged to Google Sheet:', text))
-            .catch((err) => console.error('❌ Logging failed:', err));
-        }
-      } catch (err) {
-        console.error('Invalid JSON in trippie-answers', err);
+        // Send to internal API (bypasses CORS)
+        fetch('/api/log-trippie', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log('✅ Logging response:', data))
+          .catch((err) => console.error('❌ Logging failed:', err));
       }
+    } catch (err) {
+      console.error('Invalid JSON in trippie-answers', err);
     }
-  }, []);
+  }
+}, []);
+
 
   if (!result)
     return (
