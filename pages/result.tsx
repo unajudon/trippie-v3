@@ -54,66 +54,61 @@ useEffect(() => {
       </main>
     );
 
-  return (
-    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="w-full max-w-md text-center"
-      >
-        {/* Trippie Result Image */}
-        <img
-          src={`/images/results/${result.slug}.png`} // Adjust path based on your image structure
-          alt={`You are ${result.name}`}
-          className="w-full rounded-3xl shadow-xl mb-6"
-        />
-
-        {/* Buttons below the image */}
-
-
-     <div className="flex flex-col items-center gap-4 mt-4">
-  {/* Share + See All */}
-  <div className="flex flex-wrap justify-center gap-4">
-    <button
-      onClick={() => {
-        if (navigator.share) {
-          navigator
-            .share({
-              title: 'Discover your Trippie!',
-              text: 'I just found my Trippie type — it’s surprisingly accurate 🧳✨',
-              url: 'https://trippie-v3.vercel.app',
-            })
-            .catch((error) => console.error('Sharing failed:', error));
-        } else {
-          alert('Sharing not supported on this device.');
-        }
-      }}
-      className="bg-[#10DBAC] text-white font-medium text-sm px-6 py-2 min-w-[120px] rounded-xl shadow hover:bg-[#0cc69c] transition"
+return (
+  <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-start px-4 py-8 font-poppins text-white overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="w-full max-w-md text-center mt-4"
     >
-      Share
-    </button>
+      {/* Trippie Result Image */}
+      <img
+        src={`/images/results/${result.slug}.png`}
+        alt={`You are ${result.name}`}
+        className="w-full rounded-3xl shadow-xl mb-6"
+      />
 
-    <a
-      href="/all-trippies"
-      className="bg-white text-[#7041F2] font-medium text-sm px-6 py-2 min-w-[120px] rounded-xl shadow hover:bg-gray-100 transition text-center"
-    >
-      See All
-    </a>
-  </div>
+      {/* Buttons */}
+      <div className="flex flex-col items-center gap-4 mt-4">
+        <div className="flex flex-wrap justify-center gap-4">
+          <button
+            onClick={() => {
+              if (navigator.share) {
+                navigator
+                  .share({
+                    title: 'Discover your Trippie!',
+                    text: 'I just found my Trippie type — it’s surprisingly accurate 🧳✨',
+                    url: 'https://trippie-v3.vercel.app',
+                  })
+                  .catch((error) => console.error('Sharing failed:', error));
+              } else {
+                alert('Sharing not supported on this device.');
+              }
+            }}
+            className="bg-[#10DBAC] text-white font-medium text-sm px-6 py-2 min-w-[120px] rounded-xl shadow hover:bg-[#0cc69c] transition"
+          >
+            Share
+          </button>
 
-  {/* Retake below */}
-  <button
-    onClick={() => (location.href = '/')}
-    className="bg-[#7041F2] text-white font-medium text-sm px-6 py-2 min-w-[160px] rounded-xl shadow hover:bg-[#5c35db] transition"
-  >
-    Retake Quiz
-  </button>
-</div>
+          <a
+            href="/all-trippies"
+            className="bg-white text-[#7041F2] font-medium text-sm px-6 py-2 min-w-[120px] rounded-xl shadow hover:bg-gray-100 transition text-center"
+          >
+            See All
+          </a>
+        </div>
+
+        <button
+          onClick={() => (location.href = '/')}
+          className="bg-[#7041F2] text-white font-medium text-sm px-6 py-2 min-w-[160px] rounded-xl shadow hover:bg-[#5c35db] transition"
+        >
+          Retake Quiz
+        </button>
+      </div>
+    </motion.div>
+  </main>
+);
 
 
-
-      </motion.div>
-    </main>
-  );
 }
