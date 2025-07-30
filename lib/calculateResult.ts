@@ -1,11 +1,10 @@
-// lib/calculateResult.ts
-
 export type Trippie = {
   name: string;
   mbti: string[];
   quirkyTraits: string[];
   strengths: string;
   weaknesses: string;
+  slug: string;
 };
 
 export const trippies: Trippie[] = [
@@ -19,7 +18,8 @@ export const trippies: Trippie[] = [
       "Owns a collection of travel books never read, just admired"
     ],
     strengths: "Strategic, independent, visionary",
-    weaknesses: "Can come off as aloof, struggles with spontaneous plans"
+    weaknesses: "Can come off as aloof, struggles with spontaneous plans",
+    slug: "youtrippie"
   },
   {
     name: "MerTrippie",
@@ -31,7 +31,8 @@ export const trippies: Trippie[] = [
       "Likes to start conversations with ‘what if’"
     ],
     strengths: "Imaginative, expressive, always curious",
-    weaknesses: "Can be scattered, often overthinks solutions"
+    weaknesses: "Can be scattered, often overthinks solutions",
+    slug: "mertrippie"
   },
   {
     name: "Monsieur Trippie",
@@ -43,7 +44,8 @@ export const trippies: Trippie[] = [
       "Has a secret stash of vintage postcards"
     ],
     strengths: "Idealistic, poetic, deeply compassionate",
-    weaknesses: "Overly sensitive, tends to put others’ needs before their own"
+    weaknesses: "Overly sensitive, tends to put others’ needs before their own",
+    slug: "monsieurtrippie"
   },
   {
     name: "Baby Trippie",
@@ -55,7 +57,8 @@ export const trippies: Trippie[] = [
       "Has an affinity for getting lost in bookstores"
     ],
     strengths: "Gentle, dreamy, deeply empathetic",
-    weaknesses: "Can be indecisive, tends to retreat inward"
+    weaknesses: "Can be indecisive, tends to retreat inward",
+    slug: "babytrippie"
   },
   {
     name: "OniTrippie",
@@ -67,7 +70,8 @@ export const trippies: Trippie[] = [
       "Stops to admire street art during every trip"
     ],
     strengths: "Energetic, spontaneous, always inspiring",
-    weaknesses: "Impulsive, may overcommit to plans"
+    weaknesses: "Impulsive, may overcommit to plans",
+    slug: "onitrippie"
   },
   {
     name: "Boba Trippie",
@@ -79,7 +83,8 @@ export const trippies: Trippie[] = [
       "Has a collection of all the world’s best bubble teas"
     ],
     strengths: "Friendly, nurturing, popular among friends",
-    weaknesses: "Can be too people-pleasing, occasionally neglects personal needs"
+    weaknesses: "Can be too people-pleasing, occasionally neglects personal needs",
+    slug: "bobatrippie"
   },
   {
     name: "Snorkeler Trippie",
@@ -91,7 +96,8 @@ export const trippies: Trippie[] = [
       "Keeps an emergency snack stash in every bag"
     ],
     strengths: "Independent, analytical, hands-on",
-    weaknesses: "Can be distant, may struggle with emotional expression"
+    weaknesses: "Can be distant, may struggle with emotional expression",
+    slug: "snorkelertrippie"
   },
   {
     name: "Trippie Bro",
@@ -103,7 +109,8 @@ export const trippies: Trippie[] = [
       "Always looks for the next adventure"
     ],
     strengths: "Outgoing, fun-loving, always the life of the party",
-    weaknesses: "Impulsive, may focus too much on fun and not enough on planning"
+    weaknesses: "Impulsive, may focus too much on fun and not enough on planning",
+    slug: "trippiebro"
   },
   {
     name: "Lab Trippie",
@@ -115,7 +122,8 @@ export const trippies: Trippie[] = [
       "Loves a good travel-related experiment"
     ],
     strengths: "Curious, analytical, enjoys solving problems",
-    weaknesses: "Can be detached, often caught up in their own head"
+    weaknesses: "Can be detached, often caught up in their own head",
+    slug: "labtrippie"
   },
   {
     name: "Captain Trippie",
@@ -127,7 +135,8 @@ export const trippies: Trippie[] = [
       "Has mastered the art of the perfect travel selfie"
     ],
     strengths: "Confident, decisive, natural leader",
-    weaknesses: "Can be overly controlling, impatient with others’ slower pace"
+    weaknesses: "Can be overly controlling, impatient with others’ slower pace",
+    slug: "captaintrippie"
   },
   {
     name: "Flamingo Trippie",
@@ -139,7 +148,8 @@ export const trippies: Trippie[] = [
       "Brings out the best in others, especially in group travel"
     ],
     strengths: "Charismatic, social, brings people together",
-    weaknesses: "Can burn out trying to keep everyone happy"
+    weaknesses: "Can burn out trying to keep everyone happy",
+    slug: "flamingotrippie"
   },
   {
     name: "Samurai Trippie",
@@ -151,7 +161,8 @@ export const trippies: Trippie[] = [
       "Prefers simple, quiet retreats over wild adventures"
     ],
     strengths: "Reliable, methodical, disciplined",
-    weaknesses: "Can be inflexible, dislikes surprises"
+    weaknesses: "Can be inflexible, dislikes surprises",
+    slug: "samuraitrippie"
   },
   {
     name: "Jjimbang Trippie",
@@ -163,7 +174,8 @@ export const trippies: Trippie[] = [
       "Holds onto old maps from places they've been"
     ],
     strengths: "Loyal, nurturing, sentimental",
-    weaknesses: "Can be overly nostalgic, resistant to change"
+    weaknesses: "Can be overly nostalgic, resistant to change",
+    slug: "jjimbangtrippie"
   },
   {
     name: "Bullfighter Trippie",
@@ -175,7 +187,8 @@ export const trippies: Trippie[] = [
       "Has a list of travel goals that must be checked off"
     ],
     strengths: "Assertive, strong-willed, takes charge",
-    weaknesses: "Can be stubborn, may disregard others’ preferences"
+    weaknesses: "Can be stubborn, may disregard others’ preferences",
+    slug: "bullfightertrippie"
   },
   {
     name: "Hiker Trippie",
@@ -187,7 +200,8 @@ export const trippies: Trippie[] = [
       "Collects pieces of nature, like leaves and rocks"
     ],
     strengths: "Adventurous, artistic, in touch with nature",
-    weaknesses: "Can be reserved, often lost in their thoughts"
+    weaknesses: "Can be reserved, often lost in their thoughts",
+    slug: "hikertrippie"
   },
   {
     name: "Pirate Trippie",
@@ -199,7 +213,8 @@ export const trippies: Trippie[] = [
       "Loves the thrill of the unknown"
     ],
     strengths: "Bold, thrill-seeking, loves action",
-    weaknesses: "Impulsive, can take unnecessary risks"
+    weaknesses: "Impulsive, can take unnecessary risks",
+    slug: "piratetrippie"
   }
 ];
 
