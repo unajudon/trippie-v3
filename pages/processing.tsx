@@ -10,8 +10,7 @@ export default function ProcessingPage() {
   }
 
   return (
-<main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-start pt-10 md:pt-16 px-4 font-poppins text-white overflow-hidden space-y-6">
-
+    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-start pt-16 md:pt-24 px-4 font-poppins text-white overflow-hidden space-y-6">
       {/* Sparkling background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <SparklesCore
@@ -24,6 +23,7 @@ export default function ProcessingPage() {
         />
       </div>
 
+      {/* Animated Card */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function ProcessingPage() {
         className="w-full max-w-xl bg-[#7041F2] text-white shadow-xl rounded-2xl p-5 md:p-6 border border-white/10 relative z-10"
       >
         {/* Header Text */}
-        <h1 className="text-sm md:text-base font-semibold mb-4 text-[#10DBAC]">
+        <h1 className="text-base md:text-lg font-semibold mb-3 text-[#10DBAC]">
           Your Trippie Energy Is… Shifting ✨
         </h1>
 
@@ -43,18 +43,17 @@ export default function ProcessingPage() {
           The Trippieverse is buzzing...
         </h2>
 
-        {/* Image Placeholder */}
+        {/* Processing Video */}
         <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  className="w-full h-auto rounded-xl mb-5 shadow-md"
->
-  <source src="/videos/processing-video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-4/5 max-w-sm mx-auto h-auto rounded-xl mb-4 shadow-md"
+        >
+          <source src="/videos/processing-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
         {/* Reveal Button */}
         <motion.button
@@ -73,6 +72,6 @@ export default function ProcessingPage() {
         alt="YouTrip Logo"
         className="w-24 md:w-28 h-auto opacity-80"
       />
-</main>
+    </main>
   );
 }
