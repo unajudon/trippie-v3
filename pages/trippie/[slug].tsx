@@ -1,53 +1,44 @@
-// pages/trippie/[slug].tsx
-
 import { useRouter } from 'next/router';
-import { trippies } from '@/lib/trippieData';  // Import trippie data
+import { trippies } from '@/lib/trippieData';
 
 export default function TrippiePage() {
   const router = useRouter();
   const { slug } = router.query;
 
-  // Find the trippie by slug
   const trippie = trippies.find((t) => t.slug === slug);
 
   if (!trippie) {
-    return <div>Trippie not found!</div>;  // Handle case when trippie is not found
+    return (
+      <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] text-white font-poppins">
+        <p className="text-lg">Trippie not found!</p>
+      </main>
+    );
   }
 
   return (
-    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden">
-      <div className="relative z-10 max-w-5xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">{trippie.name}</h1>
+    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-center px-4 py-10 font-poppins text-white overflow-hidden space-y-6">
+      <div className="relative z-10 max-w-md w-full text-center">
+        {/* Trippie Result Image */}
+        <img
+          src={`/images/results/${trippie.slug}.png`}
+          alt={trippie.name}
+          className="w-full rounded-3xl shadow-2xl mb-6"
+        />
 
-        {/* Trippie Image */}
-        <div className="text-center mb-8">
-          <img
-            src={`/images/${trippie.slug}.jpg`}  // Ensure the image exists in public/images folder
-            alt={trippie.name}
-            className="w-full h-48 object-cover mb-4"
-          />
-        </div>
-
-        {/* Quirky Traits */}
-        <div className="mb-6">
-          <h2 className="font-semibold text-lg mb-1">Quirky Traits:</h2>
-          <ul className="list-disc list-inside">
-            {trippie.quirkyTraits.map((trait, idx) => (
-              <li key={idx}>{trait}</li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Strengths */}
-        <div className="mb-6">
-          <h2 className="font-semibold text-lg mb-1">Strengths:</h2>
-          <p>{trippie.strengths}</p>
-        </div>
-
-        {/* Weaknesses */}
-        <div className="mb-6">
-          <h2 className="font-semibold text-lg mb-1">Weaknesses:</h2>
-          <p>{trippie.weaknesses}</p>
+        {/* Action Buttons */}
+        <div className="flex flex-wrap justify-center gap-4">
+          <a
+            href="/"
+            className="bg-white text-[#7041F2] font-medium text-sm px-6 py-2 min-w-[140px] rounded-xl shadow hover:bg-gray-100 transition"
+          >
+            Retake Quiz
+          </a>
+          <a
+            href="/all-trippies"
+            className="bg-[#10DBAC] text-white font-medium text-sm px-6 py-2 min-w-[140px] rounded-xl shadow hover:bg-[#0cc69c] transition"
+          >
+            View All Trippies
+          </a>
         </div>
       </div>
     </main>
