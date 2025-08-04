@@ -201,7 +201,7 @@ export const trippies: Trippie[] = [
     ],
     strengths: "Adventurous, artistic, in touch with nature",
     weaknesses: "Can be reserved, often lost in their thoughts",
-    slug: "hikertrippie"
+    slug: "campertrippie"
   },
   {
     name: "Pirate Trippie",
