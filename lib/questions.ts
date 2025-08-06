@@ -123,13 +123,13 @@ export const questions = [
   },
   {
     id: 12,
-    question: "🌈 You’re leaving Trippieland. What are you doing mid-portal jump?",
+    question: "🌈 You’re mid-portal jump, leaving Trippieland behind. What’s on your mind?",
     description: "",
          image: "/images/question-12.jpeg",
 
     choices: [
-      { text: "Posting your highlight reel with magical emojis", value: "E" },
-      { text: "Reflecting quietly, replaying moments in your mind", value: "I" }
+      { text: "Can’t wait to tell my friends everything, this was insane", value: "E" },
+      { text: "Can’t wait to rest and quietly soak it all in, my soul needs it", value: "I" }
     ]
   }
 ];

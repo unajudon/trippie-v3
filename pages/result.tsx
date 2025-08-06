@@ -1,3 +1,5 @@
+// pages/result.tsx
+
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { getTrippieResult } from '@/lib/calculateResult';
@@ -8,7 +10,7 @@ const SparkleBurst = () => (
   <motion.div
     initial={{ opacity: 0, scale: 0.6 }}
     animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
+    transition={{ duration: 0.8, ease: 'easeOut' }}
     className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none"
   >
     <div className="w-[280px] h-[280px] bg-[radial-gradient(circle,_#ffffff33_10%,_transparent_60%)] rounded-full blur-2xl animate-pulse" />
@@ -70,11 +72,16 @@ export default function Result() {
       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
         className="w-full max-w-md text-center mt-4 relative"
       >
         {/* Sparkle effect */}
         <SparkleBurst />
+
+        {/* Instructional Text */}
+        <p className="text-sm text-white/70 mb-3 relative z-10">
+          Tap and hold on image to save and share!
+        </p>
 
         {/* Trippie Result Image */}
         <img
@@ -102,7 +109,7 @@ export default function Result() {
               }}
               className="bg-[#10DBAC] text-white font-medium text-sm px-6 py-2 min-w-[120px] rounded-xl shadow hover:bg-[#0cc69c] transition"
             >
-              Share
+              Share quiz
             </button>
 
             <a
