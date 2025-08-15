@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { SparklesCore } from '@/components/ui/sparkles';
+import Image from 'next/image';
 
 export default function StoryPage() {
   const router = useRouter();
@@ -31,25 +32,27 @@ export default function StoryPage() {
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="w-full max-w-xl bg-[#7041F2] text-white shadow-xl rounded-2xl p-5 md:p-6 border border-white/10 relative z-10"
       >
-        {/* Header Text */}
         <h1 className="text-base md:text-lg font-semibold mb-3 text-[#10DBAC]">
           🌟 You hatched inside an abandoned suitcase, hidden in a quiet corner of Changi Airport… 
           No memory. Just a soft glow…
         </h1>
 
-        {/* Optional Subheading */}
         <h2 className="text-sm md:text-base font-normal text-white mb-4 leading-relaxed">
-          {/* Add story continuation here if needed */}
+          {/* Optional continuation */}
         </h2>
 
-        {/* Story Image — styled like the quiz page */}
-        <img
-          src="/images/story-square.jpeg"
-          alt="Trippie Story"
-          className="w-4/5 max-w-sm mx-auto h-auto rounded-xl mb-4 shadow-md"
-        />
+        {/* ✅ Optimized image with Next.js <Image /> */}
+        <div className="w-4/5 max-w-sm mx-auto h-auto mb-4">
+          <Image
+            src="/images/story-square.jpeg"
+            alt="Trippie Story"
+            width={400}
+            height={400}
+            priority
+            className="rounded-xl shadow-md w-full h-auto object-contain"
+          />
+        </div>
 
-        {/* Begin Journey Button */}
         <motion.button
           onClick={handleBegin}
           whileTap={{ scale: 0.97 }}
@@ -60,11 +63,14 @@ export default function StoryPage() {
         </motion.button>
       </motion.div>
 
-      {/* YouTrip logo under the card */}
-      <img
+      {/* ✅ Optimized logo image */}
+      <Image
         src="/images/youtrip-logo.png"
         alt="YouTrip Logo"
+        width={96}
+        height={40}
         className="w-24 md:w-28 h-auto opacity-80"
+        priority
       />
     </main>
   );

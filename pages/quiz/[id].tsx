@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { questions } from '@/lib/questions';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function QuizQuestion() {
   const router = useRouter();
@@ -10,6 +11,14 @@ export default function QuizQuestion() {
   const questionIndex = parseInt(id as string, 10) - 1;
   const question = questions[questionIndex];
   const [answers, setAnswers] = useState<string[]>([]);
+
+  // ✅ Correct way to preload the next image using native constructor
+  useEffect(() => {
+    if (typeof window !== 'undefined' && questionIndex + 1 < questions.length) {
+      const img = new window.Image();
+      img.src = questions[questionIndex + 1].image;
+    }
+  }, [questionIndex]);
 
   useEffect(() => {
     const stored = localStorage.getItem('trippie-answers');
@@ -32,7 +41,6 @@ export default function QuizQuestion() {
       router.push(`/quiz/${questionIndex + 2}`);
     } else {
       router.push('/processing');
-
     }
   }
 
@@ -41,12 +49,12 @@ export default function QuizQuestion() {
   }
 
   return (
-<main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-start pt-16 md:pt-24 px-4 font-poppins text-white overflow-hidden space-y-6">
+    <main className="relative min-h-screen w-full bg-gradient-to-br from-[#3E1F92] via-[#5C35DB] to-[#10DBAC] flex flex-col items-center justify-start pt-16 md:pt-24 px-4 font-poppins text-white overflow-hidden space-y-6">
       <motion.div
         key={question.id}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
         className="w-full max-w-xl bg-[#7041F2] text-white shadow-xl rounded-2xl p-5 md:p-6 border border-white/10"
       >
         <h1 className="text-base md:text-lg font-semibold mb-3 text-[#10DBAC]">
@@ -60,13 +68,17 @@ export default function QuizQuestion() {
         )}
 
         {question.image && (
-  <img
-    src={question.image}
-    alt="Question visual"
-    className="w-4/5 max-w-sm mx-auto h-auto rounded-xl mb-4 shadow-md"
-  />
-)}
-
+          <div className="w-4/5 max-w-sm mx-auto h-auto mb-4">
+            <Image
+              src={question.image}
+              alt="Question visual"
+              width={400}
+              height={400}
+              priority
+              className="rounded-xl shadow-md w-full h-auto object-contain"
+            />
+          </div>
+        )}
 
         <div className="flex flex-col gap-3">
           {question.choices.map((choice, idx) => (
@@ -94,13 +106,15 @@ export default function QuizQuestion() {
           Question {questionIndex + 1} of {questions.length}
         </p>
       </motion.div>
-      {/* YouTrip logo under the card */}
-<img
-  src="/images/youtrip-logo.png"
-  alt="YouTrip Logo"
-  className="w-24 md:w-28 h-auto opacity-80"
-/>
 
+      {/* YouTrip logo under the card */}
+      <img
+        src="/images/youtrip-logo.png"
+        alt="YouTrip Logo"
+        className="w-24 md:w-28 h-auto opacity-80"
+        loading="eager"
+        decoding="async"
+      />
     </main>
   );
 }
