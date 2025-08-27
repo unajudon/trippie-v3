@@ -195,7 +195,7 @@ export const trippies = [
     slug: 'bullfightertrippie'
   },
   {
-    name: "Hiker Trippie",
+    name: "Camper Trippie",
     mbti: ["ISFP"],
     quirkyTraits: [
       "Loves finding quiet corners to relax in",
